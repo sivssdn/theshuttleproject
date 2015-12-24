@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if($_SESSION['id']!='ashoka')
-	header('Location:login.php');
+	header('Location:index.php');
 	
 	//for generating report in excel
 	if(isset($_POST['report']))

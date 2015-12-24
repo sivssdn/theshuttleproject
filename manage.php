@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['id']))
-header("Location:login.php");
+header("Location:index.php");
 //echo "<span style='color:white;'>";
 //if any cancel request is made 
 	$date_today=date("Y-m-d");
