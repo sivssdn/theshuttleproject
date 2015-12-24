@@ -1,0 +1,2 @@
+font:candera, date time,available, waitlist
+remove / from seats, designed and
