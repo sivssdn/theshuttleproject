@@ -223,7 +223,7 @@ html,body{
 	font-size:2vw;
 	color:rgba(0,255,0,1);
 	}
-	.out{
+	.out,.pout{
 	background-color:rgba(11,37,74,0);
 	border:none;
 	color:#ffffff;
@@ -233,7 +233,12 @@ html,body{
 	cursor:pointer;
 	position:absolute;
 	right:2%;
-	top:16%;
+	}
+	.pout{
+	 top:16%;
+	}
+	.out{
+	 top:20%;
 	}
 	.parker{
 	display:block;
@@ -285,10 +290,16 @@ html,body{
 	 #amanage{
 	  font-size:2.6vw;
 	 }
-	 .out{
+	 .out,.pout{
 	  font-size:4vw;
 	  right:0.5%;
+	 }
+	 .pout{
+	 font-size:3.4vw;
 	  top:14%;
+	 }
+	 .out{
+	  top:18%;
 	 }
 	 #heading{
 	  line-height:600%;
@@ -398,10 +409,15 @@ html,body{
 	 #amanage{
 	  font-size:2vw;
 	 }
+	 .pout{
+	  font-size:2.4vw;
+	  top:14%;
+	  right:3%;
+	 }
 	 .out{
 	  font-size:3vw;
+	  top:17%;
 	  right:1%;
-	  top:13%;
 	 }
 	 #heading{
 	  line-height:300%;
@@ -474,10 +490,17 @@ html,body{
 	 #amanage{
 	  font-size:1.8vw;
 	 }
-	 .out{
+	 .out,.pout{
 	  font-size:2vw;
-	  right:2%;
+	  
+	 }
+	 .pout{
+	  right:3%;
 	  top:14%;
+	 }
+	 .out{
+	  right:2%;
+	  top:18%;
 	 }
 	 .place{
 	  width:72%;
@@ -521,9 +544,16 @@ html,body{
 	 #amanage{
 	  font-size:1.2vw;
 	 }
-	 .out{
+	 .out,.pout{
+	  right:1%;
 	  font-size:2vw;
+	 }
+	 .pout{
+	  font-size:1.6vw;
 	  top:14%;
+	 }
+	 .out{
+	  top:18%;
 	 }
 	 .place{
 	  width:68%;
@@ -595,5 +625,8 @@ html,body{
 	 height:18%;
 	 margin-left:20%;
 	 margin-top:4%;
+	 }
+	 .pout{
+	  display:none;
 	 }
 	}

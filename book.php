@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['id']))
-header("Location:index.php");	
+header("Location:login.php");	
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -13,7 +13,7 @@ header("Location:index.php");
 	
  </head>
  <body>
-	<img src="logo.png" id="logo">	
+	<a href="index.php"><img src="logo.png" id="logo"></a>
 	<div id="name">
 	Hi <?php echo $_SESSION['name']; ?>! 
 	</div>
@@ -21,6 +21,7 @@ header("Location:index.php");
 	<div id="manage">
 	 <a id="amanage" href="manage.php">MANAGE BOOKINGS</a>
 	</div>
+	<a class="pout" href="change_pass.php">CHANGE PASSWORD</a>
 	
 	<form method="post" action="logout.php">
 	 <input type="submit" class="out" name="logout" value="Sign out!">
