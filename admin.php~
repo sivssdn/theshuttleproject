@@ -191,7 +191,7 @@
 			//to extend execution time
 			ini_set('max_execution_time',300);
 			
-			if(move_uploaded_file($_FILES['user_add']['tmp_name'],"./add_user/{$_FILES['user_add']['name']}"))
+			if(move_uploaded_file($_FILES['user_add']['tmp_name'],"/add_user/{$_FILES['user_add']['name']}"))
 			{
 				//echo "FILE UPLOAD SUCCESSFUL";
 				//read excel file and add its contents to database
