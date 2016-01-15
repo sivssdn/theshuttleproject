@@ -369,7 +369,7 @@ if(isset($_POST['d']) && isset($_POST['t']) && isset($_POST['s']))
 	box-shadow:0px 0px 7px 2px rgba(0,191,243,1);
 	}
 	.h_image{
-	 height:150%;
+	 height:100%;
 	}
 	/*android*/
 	@media only screen and (min-width:100px) and (max-width:480px){

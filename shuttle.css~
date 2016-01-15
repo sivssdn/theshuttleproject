@@ -588,3 +588,45 @@ html,body{
 	 margin-top:4%;
 	 }
 	}
+	/*netbook*/
+	@media only screen and (min-width:1280px) and (min-height:800px) and (max-height:1024px){
+	 #manage{
+	  margin-top:50%;
+	  line-height:260%;
+	 }
+	 .place{
+	  width:55%;
+	  margin-left:22%;
+	  margin-top:2%;
+	 }
+	 .cl,.cll{
+	  height:11%;
+	  width:5%;
+	  margin-top:-0.6%;
+	 }
+	 .cll{
+	  margin-left:24%;
+	 }
+	 select{
+	  font-size:1.4vw;
+	  height:11%;
+	  width:18%;
+	 }
+	 #avlbl,#avlbl1,#available,#available2,#waitlist,#waitlist2{
+	 font-size:2vw;
+	 }
+	 #avlbl1{
+	  margin-left:26%;
+	 }
+	 label{
+	  font-size:2vw;
+	 }
+	 #book,#book1{
+	 height:18%;
+	 margin-left:20%;
+	 margin-top:4%;
+	 }
+	 .pout{
+	  display:none;
+	 }
+	}
