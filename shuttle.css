@@ -279,7 +279,7 @@ html,body{
 	 }
 	 #name{
 	  font-size:4vw;
-	  margin-right:4%;
+	  margin-right:4%;display:none;
 	 }
 	 #manage{
 	  margin-top:-22%;
@@ -398,7 +398,7 @@ html,body{
 	 }
 	 #name{
 	  font-size:3vw;
-	  margin-right:4%;
+	  margin-right:4%;display:none;
 	 }
 	 #manage{
 	  margin-top:-15%;

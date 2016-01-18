@@ -1,7 +1,7 @@
 <?php
  session_start();
  if(!isset($_SESSION['id']))
- header("Location:login.php");
+ header("Location:index.php");
  else if(isset($_POST['csubmit']))
  {
 	$pass=htmlspecialchars($_POST['cpass']);
@@ -43,6 +43,7 @@
 	 margin-top:2%;
 	}
 	
+
 	#log1{
 	height:10%;
 	width:20%;
@@ -66,7 +67,8 @@
 	 background-size:cover;
 	 }
 	 h3{
-	  right:16%;
+
+	  right:10%;
 	  font-size:3vw;
 	 }
 	 #log1{
@@ -77,7 +79,7 @@
 	  margin-top:40%;
 	 }
 	 #upass1,#upass{
-	 width:60%;
+	 width:40%;
 	 font-size:4vw;
 	 }
 	 #cast{
@@ -87,10 +89,10 @@
 	 font-size:3.4vw;
 	 }
 	.out{
-	 margin-top:6%;
+	 margin-top:12%;
 	}
 	#manage{
-	margin-right:20%;	
+	margin-right:1%;	
 	}
 	}
 	/*For iphone*/
