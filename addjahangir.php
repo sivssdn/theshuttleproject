@@ -19,7 +19,7 @@ require('add_head.php');
 		//connecting to waitlist table
 		$waitlist=new PDO("mysql:host=localhost;dbname=shuttle","root","server");
 		$people=new PDO("mysql:host=localhost;dbname=shuttle","root","server");
-		$db->exec("UPDATE `shuttle`.`addshuttle_towardsjahangir` SET `{$utime}` = '{$increaseto}' WHERE `addshuttle_towardscampus`.`days` LIKE '{$_SESSION['day']}';");
+		$db->exec("UPDATE `shuttle`.`addshuttle_towardsjahangir` SET `{$utime}` = '{$increaseto}' WHERE `addshuttle_towardsjahangir`.`days` LIKE '{$_SESSION['day']}';");
 		
 		for($i=0; $i<$uwait; $i++)
 		{
