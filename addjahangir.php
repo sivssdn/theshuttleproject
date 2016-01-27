@@ -14,7 +14,7 @@ require('add_head.php');
 		$utime=$_POST['time'];
 		$uwait=$_POST['wait'];
 		$increaseto=$_POST['increaseto'];
-		//connecting to addshuttle_towardscampus table
+		//connecting to addshuttle_towardsjahangir table
 		$db=new PDO("mysql:host=localhost;dbname=shuttle;","root","server");	
 		//connecting to waitlist table
 		$waitlist=new PDO("mysql:host=localhost;dbname=shuttle","root","server");
@@ -49,7 +49,7 @@ require('add_head.php');
 				$seats_count=$seats_present->fetch();
 				if($seats_count[0]!=0)
 				{
-					$db->exec("UPDATE `shuttle`.`addshuttle_towardsjahangir` SET `{$valcol}` = '12' WHERE `addshuttle_towardscampus`.`days` LIKE '{$_SESSION['day']}';");
+					$db->exec("UPDATE `shuttle`.`addshuttle_towardsjahangir` SET `{$valcol}` = '12' WHERE `addshuttle_towardsjahangir`.`days` LIKE '{$_SESSION['day']}';");
 				}
 				
 			}
@@ -88,12 +88,12 @@ require('add_head.php');
 				//connecting to table waitlist to get number of waitlist
 				$waitlist=new PDO("mysql:host=localhost;dbname=shuttle","root","server");
 				
-				//for fetching timings for today from addshuttle_towardscampus table
+				//for fetching timings for today from addshuttle_towardsjahangir table
 				$db=new PDO("mysql:host=localhost;dbname=shuttle;","root","server");
 				$db->beginTransaction();
 				
 				
-					//fetching timings from addshuttle_towardscampus table.
+					//fetching timings from addshuttle_towardsjahangir table.
 					$mon=$db->prepare("describe addshuttle_towardsjahangir;");
 					$mon->execute();
 					$result=$mon->fetchAll(PDO::FETCH_COLUMN);
@@ -109,7 +109,7 @@ require('add_head.php');
 							$waitlist_booked->execute();
 							$waitlist_total=$waitlist_booked->fetch();
 							
-							//to get number of seats currently granted at a particular time from addshuttle_towardscampus table
+							//to get number of seats currently granted at a particular time from addshuttle_towardsjahangir table
 							$seats_present=$db->prepare("SELECT `{$res}` from addshuttle_towardsjahangir WHERE `days` LIKE '{$_SESSION['day']}';");
 							$seats_present->execute();
 							$seats_count=$seats_present->fetch();
