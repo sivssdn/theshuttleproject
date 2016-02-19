@@ -6,8 +6,8 @@
 	//for generating report in excel
 	if(isset($_POST['report']))
 	{
-			require_once '.\PHPExcel-1.8\Classes\PHPExcel\IOFactory.php';
-				$obj=PHPExcel_IOFactory::load("./report/people.xlsx");
+				require_once($_SERVER['DOCUMENT_ROOT'].'/PHPExcel-1.8/Classes/PHPExcel/IOFactory.php');
+				$obj=PHPExcel_IOFactory::load($_SERVER['DOCUMENT_ROOT']."/report/people.xlsx");
 							//for auto download excel file
 			header("Content-Type: application/vnd.ms-excel;charset=utf-8");
 			header("Content-Disposition: attachment;filename=people.xlsx");
@@ -75,10 +75,10 @@
 				
 				//create writer to save into .xlsx file
 				$objectWriter=PHPExcel_IOFactory::createWriter($obj,"Excel2007");
-				$objectWriter->save('./report/people.xlsx');
+				$objectWriter->save($_SERVER['DOCUMENT_ROOT'].'/report/people.xlsx');
 				
 				//for people towards jahangirpuri
-				$obj2=PHPExcel_IOFactory::load("./report/people.xlsx");
+				$obj2=PHPExcel_IOFactory::load($_SERVER['DOCUMENT_ROOT']."/report/people.xlsx");
 				
 				//CONFIRMED ENTRIES
 				$data=$db->prepare("SELECT `name`,`email`,`date`,`time` FROM people2;");
@@ -132,7 +132,7 @@
 					$obj2->getActiveSheet()->setCellValue("{$E}","WAITLIST");
 				}
 				$objectWriter=PHPExcel_IOFactory::createWriter($obj2,"Excel2007");
-				$objectWriter->save('./report/people.xlsx');
+				$objectWriter->save($_SERVER['DOCUMENT_ROOT'].'/report/people.xlsx');
 				$objectWriter->save('php://output');	
 				
 				$db=null;
